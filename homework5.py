@@ -49,6 +49,7 @@ motif_probability()
 '''
 '''
 plot_proabability()
+	This function takes in a motif and probability of that motif occuring and plots values.
 '''
 def plot_proabability(motif, probability):
 	plt.xlabel("Sequence Length")
@@ -65,6 +66,8 @@ plot_proabability()
 '''
 '''
 gen_monte_carlo()
+	This function takes in length and frequencies of a motif and returns the results
+	of a Monte Carlo simulation.
 '''
 def gen_monte_carlo(length, freqs):
 	tmp = ""
@@ -83,7 +86,9 @@ def gen_monte_carlo(length, freqs):
 gen_monte_carlo()
 '''
 '''
-plot_monte_carlo(motif)
+plot_monte_carlo()
+	This function takes in a motif and nucleotide frequencies and plots the
+	Monte Carol simulation.
 '''
 def plot_monte_carlo(motif, freqs):
 	avg_100 = calc_avg_found(motif,freqs,100)
@@ -105,6 +110,8 @@ plot_monte_carlo(motif)
 '''
 '''
 calc_avg_found()
+	This function calculates the average number of counts that a motif was
+	found in a Monte Carlo simulation.
 '''
 def calc_avg_found(motif, freqs, length):
 	for c in range(1, 100):
